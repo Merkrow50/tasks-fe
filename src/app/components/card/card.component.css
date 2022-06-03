@@ -1,0 +1,21 @@
+mat-card {
+  background-color: #484848;
+  min-height: 600px;
+  box-shadow: 12px 10px 25px black!important;
+}
+
+mat-card-title {
+  color: #46ff00;
+  font-size: xx-large;
+}
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card-content {
+  height: 600px;
+  overflow: auto;
+}

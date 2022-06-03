@@ -1,0 +1,34 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add task to do!
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form class="example-form" (ngSubmit)="submit()" [formGroup]="taskForm" #formDir="ngForm">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Task</mat-label>
+        <input matInput formControlName="name"  placeholder="Ex. clean the house, take out the trash...">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Task description</mat-label>
+        <textarea style="overflow: hidden; " formControlName="description" matInput placeholder="Ex. The house must be cleaned at two in the afternoon starting with the bathroom and ending with the bedroom..."></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Task status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option *ngFor="let status of status" [value]="status.value">
+            {{status.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-action-row>
+        <button type="submit" mat-button color="accent">Add</button>
+      </mat-action-row>
+    </form>
+
+  </mat-expansion-panel>
+</mat-accordion>
